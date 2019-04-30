@@ -1,0 +1,12 @@
+* {
+
+  proxy / http://stack {
+    transparent
+    try_duration 10s
+  }
+
+  tls {
+    max_certs 100
+  }
+  
+}

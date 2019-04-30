@@ -1,6 +1,6 @@
 FROM golang:1.11-stretch AS builder
 
-ARG BUILD release
+ARG BUILD=release
 
 WORKDIR /go/src/github.com/cozy/cozy-stack
 COPY . .

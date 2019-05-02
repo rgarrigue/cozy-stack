@@ -6,7 +6,7 @@ WORKDIR /go/src/github.com/cozy/cozy-stack
 COPY . .
 RUN set -eux && \
     go get -d -v ./... && \
-    bash -eux ./scripts/build.sh ${BUILD}
+    bash -ex ./scripts/build.sh ${BUILD}
 
 
 

@@ -20,7 +20,7 @@ ENV COUCHDB_PROTOCOL=http \
     COZY_PASSWORD_RESET_INTERVAL=0
 
 
-COPY --from=builder /go/src/github.com/cozy/cozy-stack/cozy-stack* /usr/local/bin/cozy-stack
+COPY --from=builder /go/src/github.com/cozy/cozy-stack/cozy-stack /usr/local/bin/cozy-stack
 COPY ./scripts/docker-entrypoint-production.sh /usr/local/bin/docker-entrypoint.sh
 COPY ./scripts/konnector-*-run.sh /usr/local/bin/
 COPY ./docker/wait-for-it.sh /usr/local/bin/
